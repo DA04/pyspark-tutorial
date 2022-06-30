@@ -1,0 +1,8 @@
+# Run a new container in Docker
+docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.8.1
+
+# copy local file to docker container - https://stackoverflow.com/questions/22907231/how-to-copy-files-from-host-to-docker-container
+## Get the container_id first
+docker ps
+## docker copy file from local folder to container zeppelin/data folder
+docker cp /c/Users/79653/Documents/Hadoop/data/stocks_price_final.csv 049cf23e06d3:/zeppelin/data/stocks_price_final.csv
